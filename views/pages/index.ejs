@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body class="container">
+    <header>
+         <%- include('../partials/header') %>
+    </header>
+    <main>
+        <div class="jumbotron">
+            <h1>EJS view engine!</h1>      
+        </div>
+        <h2>Cursos</h2>
+        <table class="table table-bordered">
+            <th>
+                Descrição
+            </th>
+            <th>
+                Carga Horária
+            </th>
+            <tbody>
+            <% cursos.forEach(function(cursos){ %>
+                <tr>
+                    <td><%= cursos.descricao %></td>
+                    <td><%= cursos.ch %></td>
+                </tr>
+            <% }); %>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>    
+</body>
+</html>
